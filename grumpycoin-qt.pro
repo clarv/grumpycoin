@@ -1,6 +1,7 @@
 TEMPLATE = app
-TARGET = Grumpycoin-qt
-VERSION = 0.8.5
+TARGET = Grumpycoin
+macx:TARGET = "GrumpyCoin"
+VERSION = 2.1
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -15,23 +16,22 @@ CONFIG += release
 USE_IPV6=-
 #USE_UPNP=-
 #USE_QRCODE=0
-# UNCOMMENT THIS SECTION TO BUILD ON WINDOWS
 
-LIBS += -lshlwapi
-LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
-LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
-LIBS += -lws2_32 -lole32 -loleaut32 -luuid -lgdi32
+win32:LIBS += -lshlwapi
+win32:LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
+win32:LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
+win32:LIBS += -lws2_32 -lole32 -loleaut32 -luuid -lgdi32
 #LIBS += -lboost_system-mgw46-mt-sd-1_53 -lboost_filesystem-mgw46-mt-sd-1_53 -lboost_program_options-mgw46-mt-sd-1_53 -lboost_thread-mgw46-mt-sd-1_53
 #LIBS += -lboost_system-mgw48-mt-sd-1_55 -lboost_filesystem-mgw48-mt-sd-1_55 -lboost_program_options-mgw48-mt-sd-1_55 -lboost_thread-mgw48-mt-sd-1_55
-BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
-BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=c:/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=c:/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=c:/deps/openssl-1.0.1e/include
-OPENSSL_LIB_PATH=c:/deps/openssl-1.0.1e
-MINIUPNPC_INCLUDE_PATH=C:/deps/
-MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+win32:BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
+win32:BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
+win32:BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
+win32:BDB_INCLUDE_PATH=c:/deps/db-4.8.30.NC/build_unix
+win32:BDB_LIB_PATH=c:/deps/db-4.8.30.NC/build_unix
+win32:OPENSSL_INCLUDE_PATH=c:/deps/openssl-1.0.1e/include
+win32:OPENSSL_LIB_PATH=c:/deps/openssl-1.0.1e
+win32:MINIUPNPC_INCLUDE_PATH=C:/deps/
+win32:MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
 
 OBJECTS_DIR = build
 MOC_DIR = build

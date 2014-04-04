@@ -1,4 +1,12 @@
-grumpycoin community version 2.0
+version 2.1
+changes			comment
+src\main.cpp		KGW exploit fix, startblock 48200
+			https://bitcointalk.org/index.php?topic=552895
+src\main.h		KGW exploit fix, startblock 48200
+src\version.h		updated version
+src\qt\bitcoingui.cpp	tooltip smaller font
+
+version 2.0
 
 Changes			Comment
 grumpycoin.pro		windows fixes

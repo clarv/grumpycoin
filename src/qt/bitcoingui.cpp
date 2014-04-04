@@ -81,7 +81,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     setWindowTitle(tr("GrumpyCoin") + " - " + tr("Wallet"));
     /*Clarv super smash boxoffice hit fix*/
     //setStyleSheet(" * {background-color: rgb(0,166,207);}");
-    setStyleSheet(" QStatusBar {background-color: " + THEME_BACKGROUND_RGB + ";color:" + THEME_TEXTCOLOR + ";font-family:" + THEME_FONT + ";} QToolTip {background-color: " + THEME_TOOLTIP_BACKGROUND + ";color:" + THEME_TOOLTIP_TEXT + ";font-family:" + THEME_FONT + ";}");
+    setStyleSheet(" QStatusBar {background-color: " + THEME_BACKGROUND_RGB + ";color:" + THEME_TEXTCOLOR + ";font-family:" + THEME_FONT + ";} QToolTip {background-color: " + THEME_TOOLTIP_BACKGROUND + ";color:" + THEME_TOOLTIP_TEXT + ";font-family:" + THEME_FONT + ";font-size:9px;}");
     //Font antialias fix
     QFont f=QApplication::font();
     f.setStyleStrategy(QFont::PreferAntialias);
