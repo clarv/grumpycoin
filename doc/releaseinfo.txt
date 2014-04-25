@@ -1,3 +1,15 @@
+version 2.2
+Compiled with openssl 1.0.1g security patch (Heartbleed bug)
+
+grumpycoin-qt.pro
+changes				comment
+grumpycoin-qt.pro		USE_UPNP, USE_QRCODE
+src/qt/res/icons/bitcoin.icns	mac fix
+src/serialize.h 		mac fix, row 811 code only for windows
+src/util.cpp 			mac fix, row 1291 check OSX version
+src/version.h			2.2
+src/net.cpp 			row 1000, dns seed only grumpycoin comunity supported addresses
+
 version 2.1
 changes			comment
 src\main.cpp		KGW exploit fix, startblock 48200

@@ -14,8 +14,8 @@ CONFIG += release
 #CONFIG += release CONFIG -=debug CONFIG -=debug_and_release
 
 USE_IPV6=-
-#USE_UPNP=-
-#USE_QRCODE=0
+USE_UPNP=1
+USE_QRCODE=1
 
 win32:LIBS += -lshlwapi
 win32:LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
@@ -28,10 +28,12 @@ win32:BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
 win32:BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
 win32:BDB_INCLUDE_PATH=c:/deps/db-4.8.30.NC/build_unix
 win32:BDB_LIB_PATH=c:/deps/db-4.8.30.NC/build_unix
-win32:OPENSSL_INCLUDE_PATH=c:/deps/openssl-1.0.1e/include
-win32:OPENSSL_LIB_PATH=c:/deps/openssl-1.0.1e
+win32:OPENSSL_INCLUDE_PATH=c:/deps/openssl-1.0.1g/include
+win32:OPENSSL_LIB_PATH=c:/deps/openssl-1.0.1g
 win32:MINIUPNPC_INCLUDE_PATH=C:/deps/
 win32:MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+win32:QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
+win32:QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
 
 OBJECTS_DIR = build
 MOC_DIR = build
