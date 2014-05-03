@@ -1,3 +1,20 @@
+version 2.3
+grumpycoin-qt.pro			version, 
+					osx fixes: 
+					uncommented: macx:BOOST_LIB_SUFFIX = -mt
+					added: BOOST_THREAD_LIB_SUFFIX="-mt"
+					removed duplicate target for OSX: macx:TARGET = "Grumpycoin-Qt"
+src/qt/bitcoingui.cpp			loading font Finger Paint in application using QFontdatabase
+					added global font-family and font-size style and removed font-family style from other objects
+src/net.cpp				osx fix: adding boost:: prefix to variable declaration
+src/qt/bitcoin.qrc			added Finger Paint font
+src/qt/fonts/FingerPaint-Regular.ttf	Finger Paint font used by GrumpyCoin
+src\qt\images\splash2.jpg		removed
+contrib/*				removed folder and all files, not used
+share/*					removed folder and all files, not used
+src/obj-test/*				removed folder and all files, not used
+src/test/*				removed folder and all files, not used
+
 version 2.2
 Compiled with openssl 1.0.1g security patch (Heartbleed bug)
 

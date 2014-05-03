@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = Grumpycoin
 macx:TARGET = "GrumpyCoin"
-VERSION = 2.1
+VERSION = 2.3
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -13,6 +13,7 @@ CONFIG += static
 CONFIG += release
 #CONFIG += release CONFIG -=debug CONFIG -=debug_and_release
 
+macx:BOOST_THREAD_LIB_SUFFIX="-mt"
 USE_IPV6=-
 USE_UPNP=1
 USE_QRCODE=1
@@ -317,7 +318,7 @@ OTHER_FILES += \
 
 # platform specific defaults, if not overridden on command line
 #isEmpty(BOOST_LIB_SUFFIX) {
-#    macx:BOOST_LIB_SUFFIX = -mt
+    macx:BOOST_LIB_SUFFIX = -mt
 #    windows:BOOST_LIB_SUFFIX = -mgw44-mt-s-1_49
 #}
 
@@ -370,7 +371,6 @@ macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
 macx:ICON = src/qt/res/icons/bitcoin.icns
-macx:TARGET = "Grumpycoin-Qt"
 
 # Set libraries and includes at end, to use platform-defined defaults if not overridden
 INCLUDEPATH += $$BOOST_INCLUDE_PATH $$BDB_INCLUDE_PATH $$OPENSSL_INCLUDE_PATH $$QRENCODE_INCLUDE_PATH

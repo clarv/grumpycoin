@@ -43,6 +43,7 @@
         <file alias="filesave">res/icons/filesave.png</file>
         <file alias="qrcode">res/icons/qrcode.png</file>
         <file alias="debugwindow">res/icons/debugwindow.png</file>
+        <file>res/fonts/FingerPaint-Regular.ttf</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="splash">res/images/splash2.png</file>
@@ -88,5 +89,8 @@
         <file alias="uk">locale/bitcoin_uk.qm</file>
         <file alias="zh_CN">locale/bitcoin_zh_CN.qm</file>
         <file alias="zh_TW">locale/bitcoin_zh_TW.qm</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file alias="Finger Paint">res/fonts/FingerPaint-Regular.ttf</file>
     </qresource>
 </RCC>
